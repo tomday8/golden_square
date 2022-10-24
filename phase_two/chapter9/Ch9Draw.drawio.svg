@@ -1,0 +1,173 @@
+<svg host="65bd71144e" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="351px" height="391px" viewBox="-0.5 -0.5 351 391" content="&lt;mxfile&gt;&lt;diagram id=&quot;QklWLydcswOpDkrvKJ3z&quot; name=&quot;Page-1&quot;&gt;3VhLc5swEP41nmkvHgE2jo+N7SSHtpNpOpP0qMAaNBGIEfKrv74SCCNeCUmwp4kPHu2Hdlfa/bSsGDmLaH/NcRL+YD7QkY38/chZjmx7MrHlvwIOGpjNcyDgxM8hqwTuyF/QINLohviQViYKxqggSRX0WByDJyoY5pztqtPWjFa9JjiABnDnYdpE74kvwhy9sGclfgMkCAvPlqv3F+Fist5JGmKf7QzIWY2cBWdM5KNovwCqYlfEJde76nh6XBiHWPRR0InYYrrRe/MoTlMJLQnmh5HtUmnn8pHLUaBGfZA7wTgoG3IRnKhRYwZQlRdjBvoiSARyobsk+tqiEMoo2YiSVGmxtdpkyGKpgOJN9Ag81fEUhyJJu5AIuEuwp+Sd5KE0E4qISsmSQ5wmOTXWZA++AigJYilTWCuPa0LpglHGM2uO9YgtsBXOYmHg6+wn8VRw9gTGE4Tc1berLED1nOg0bYEL2BuQztE1sAiEij4qniLNF31gplrcleyzZhoLTeYVINaMD46mS1LIgeZFO0ecBkeK/PhkW2dBmuC4wCpUWsWi5JN0aU404BaTL3jpZuSQXhYcsDBJPT6FlxusPAgiqGK2ylBWxIT0+X6Hv0BseKwc7Bj3M8ubWIx76y8w9TZURkGqymj4JA6yxUbQ38azyarM+8Sn2bFfPs1O22l2BjjNk86K/5v5rE95L48Czl68Pht3q5GSPXH2AuRPajECojTfiOwCZB03GUTORAIX4bk1ew0J7OXMlZX4JCQ4yiYL7DYW2AOwYPremq7I8j17G3/Uin7sUnLe55w8SVVvnIV7kiUjzZsaj0UJBVFWfBIXUMexeNUSP/EZqrdF9uycfZHbWUlvVWv6s+hLe1TUEDxVFrMSCXmjJG8l/NjdPtNjn7cNRmiKoOMFaS0vF88w4QQ105qfs2ZetNTMWrAh9r+p+6WUMi4QrxrtLLcPpvBHCmg8LcSl2ik6SodC2hPxYIwNLSmVSkoodDrjnbIN96DS2wvMAxCVKyH4lTtwMydGzKctIS8wDrJlJNvqzbktDdrDLSOxMFI+rx1xq5bJfDday7zp1g25NUOTmqE8Bg1DGSuO2+5FlPkARHlDwt9Krl5EmTSJMv2/iVIv8X2JMpnUDNVrx3BEKbg8TEkZyztKNfMz5JygsGQWboHLi58A/hoSuR+t2jhoKBJNhyKRFMvPg/n08hurs/oH&lt;/diagram&gt;&lt;/mxfile&gt;">
+    <defs/>
+    <g>
+        <rect x="0" y="0" width="170" height="170" fill="#1ba1e2" stroke="#006eaf" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe flex-start; width: 168px; height: 1px; padding-top: 85px; margin-left: 2px;">
+                        <div data-drawio-colors="color: #ffffff; " style="box-sizing: border-box; font-size: 0px; text-align: left;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(255, 255, 255); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                class Diary
+                                <br/>
+                                <br/>
+                                <br/>
+                                Stores entries
+                                <br/>
+                                Select entries (time/wpm)
+                                <br/>
+                                Show list of phone numbers
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="2" y="89" fill="#ffffff" font-family="Helvetica" font-size="12px">
+                    class Diary...
+                </text>
+            </switch>
+        </g>
+        <rect x="220" y="0" width="130" height="130" fill="#1ba1e2" stroke="#006eaf" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe flex-start; width: 128px; height: 1px; padding-top: 65px; margin-left: 222px;">
+                        <div data-drawio-colors="color: #ffffff; " style="box-sizing: border-box; font-size: 0px; text-align: left;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(255, 255, 255); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                <div>
+                                    <span>
+                                        class DiaryEntry
+                                    </span>
+                                </div>
+                                <div>
+                                    <span>
+                                        <br/>
+                                    </span>
+                                </div>
+                                <div>
+                                    <span>
+                                        Creates entries.
+                                    </span>
+                                </div>
+                                <div>
+                                    <span>
+                                        Has title / contents.
+                                    </span>
+                                </div>
+                                <div>
+                                    Returns word count.
+                                </div>
+                                <div>
+                                    Calculate reading time.
+                                </div>
+                                <div>
+                                    <br/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="222" y="69" fill="#ffffff" font-family="Helvetica" font-size="12px">
+                    class DiaryEntry...
+                </text>
+            </switch>
+        </g>
+        <rect x="220" y="270" width="120" height="120" fill="#60a917" stroke="#2d7600" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe flex-start; width: 118px; height: 1px; padding-top: 330px; margin-left: 222px;">
+                        <div data-drawio-colors="color: #ffffff; " style="box-sizing: border-box; font-size: 0px; text-align: left;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(255, 255, 255); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                class Todo
+                                <br/>
+                                <br/>
+                                Creates a todo.
+                                <br/>
+                                <i>
+                                    Can mark items as done.
+                                </i>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="222" y="334" fill="#ffffff" font-family="Helvetica" font-size="12px">
+                    class Todo...
+                </text>
+            </switch>
+        </g>
+        <rect x="0" y="220" width="170" height="170" fill="#60a917" stroke="#2d7600" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe flex-start; width: 168px; height: 1px; padding-top: 305px; margin-left: 2px;">
+                        <div data-drawio-colors="color: #ffffff; " style="box-sizing: border-box; font-size: 0px; text-align: left;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(255, 255, 255); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                <div>
+                                    <span>
+                                        class TodoList
+                                    </span>
+                                </div>
+                                <div>
+                                    <span>
+                                        <br/>
+                                    </span>
+                                </div>
+                                <div>
+                                    <span>
+                                        Stores Todo items.
+                                    </span>
+                                </div>
+                                <div>
+                                    <span>
+                                        <i>
+                                            Will show complete / incomplete.
+                                        </i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="2" y="309" fill="#ffffff" font-family="Helvetica" font-size="12px">
+                    class TodoList...
+                </text>
+            </switch>
+        </g>
+        <rect x="220" y="140" width="120" height="120" fill="#0050ef" stroke="#001dbc" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe flex-start; width: 118px; height: 1px; padding-top: 200px; margin-left: 222px;">
+                        <div data-drawio-colors="color: #ffffff; " style="box-sizing: border-box; font-size: 0px; text-align: left;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(255, 255, 255); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                class PhoneNumbers
+                                <br/>
+                                <br/>
+                                Check an entry for number
+                                <br/>
+                                Stores phone numbers
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="222" y="204" fill="#ffffff" font-family="Helvetica" font-size="12px">
+                    class PhoneNumbers...
+                </text>
+            </switch>
+        </g>
+        <path d="M 220 65 L 175.91 82.63" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 171.04 84.58 L 176.24 78.74 L 175.91 82.63 L 178.84 85.23 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 220 330 L 175.7 307.85" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 171 305.5 L 178.83 305.5 L 175.7 307.85 L 175.7 311.76 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 220 200 L 174.33 124.95" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 171.6 120.47 L 178.23 124.63 L 174.33 124.95 L 172.25 128.26 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+    </g>
+    <switch>
+        <g requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"/>
+        <a transform="translate(0,-5)" xlink:href="https://www.diagrams.net/doc/faq/svg-export-text-problems" target="_blank">
+            <text text-anchor="middle" font-size="10px" x="50%" y="100%">
+                Viewer does not support full SVG 1.1
+            </text>
+        </a>
+    </switch>
+</svg>

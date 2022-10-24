@@ -1,0 +1,265 @@
+{{PROBLEM}} Multi-Class Planned Design Recipe
+
+1. Describe the Problem
+
+As a user
+So that I can record my experiences
+I want to keep a regular diary
+
+As a user
+So that I can reflect on my experiences
+I want to read my past diary entries
+
+As a user
+So that I can reflect on my experiences in my busy day
+I want to select diary entries to read based on how much time I have and my reading speed
+
+# As a user
+# So that I can keep track of my tasks
+# I want to keep a todo list along with my diary
+
+As a user
+So that I can keep track of my contacts
+I want to see a list of all of the mobile phone numbers in all my diary entries
+
+2. Design the Class System
+
+                class Diary
+                    # Stores diary Entries - Receives an instance of DiaryEntry
+                    # Selects entries based on reading time / wpm
+                    # Shows a list of phone numbers in entries
+                ^^^^^
+                class DiaryEntry
+                    # Creates a diary entry.
+                    # Will have title and contents.
+                    # Will calculate number of words
+                    # Will calculate reading time
+                    # Can return diary entries
+
+                # class TodoList
+                #     # Stores a list of todo items
+                #     # Will show which items are complete or not
+                # ^^^^^
+                # class Todo
+                #     # Creates a todo item.
+                #     # Has ability to mark an item complete
+
+                class PhoneNumbers
+                    # Checks a diary entry for a number
+                    # Stores list of number
+
+class Diary
+    def initialize
+        #Stores entries
+    end
+
+    def add(entry)
+        #receives an instance of DiaryEntry
+        #Adds to list of entries.
+    end
+
+    def all_entries
+        #returns entries
+    end
+
+    def readable_entry(wpm, mins)
+        #will need wpm / minutes avaialable
+        #calls reading_time
+        #returns readable entry
+    end
+end
+
+class DiaryEntry
+    def initialize(title, contents)
+        #Stores a title and contents
+    end
+
+    def title
+        #returns title
+    end
+
+    def contents
+        #returns contents
+    end
+
+    def word_counter   # <- May need moving to Diary
+        #returns number of words in contents
+    end
+
+    def reading_time(wpm) # <- May need moving to Diary
+        # returns how long to read a given item
+        #will require wpm
+        #calls word_counter
+    end
+end 
+
+class PhoneNumbers
+    def initialize
+        #has a list of numbers
+    end
+
+    def list
+        #returns list of numbers
+    end
+
+    def split_entries
+        #receives diary 
+        #splits into into individual entries
+    end
+
+    def check_for_number(diary_text)
+        #receives an individual entry
+        #scans entry for a number
+        #checks number is correct
+        #if valid sends to list
+    end
+end
+
+# class TodoList
+#     def intialize
+#         #will store a list of tasks
+#     end
+
+#     def add(task)
+#         #adds an instance of Todo
+#         #sends to list of tasks
+#     end
+
+#     def incomplete
+#         #returns list of tasks to complete
+#     end
+
+#     def complete
+#         #returns a list of complete items
+#     end
+# end
+
+# class Todo
+#     def intialize(task)
+#         #intializes with a todo item
+#         #has an indication of whether an item is complete
+#     end
+
+#     def todo_task
+#         #returns task
+#     end
+
+#     def mark_complete
+#         #marks task as complete
+#     end
+
+#     def check_status
+#         #returns whether item is complete
+#     end
+# end
+
+
+
+3. Create Examples as Integration Tests
+
+#Integration Test
+
+#Diary -> DiaryEntry
+#1 - adds diary entries to the diary
+diary = Diary.new
+entry_1 = DiaryEntry.new("A Title", "Some contents.")
+entry_2 = DiaryEntry.new("A Title", "Some more contents here.")
+diary.add(entry_1)
+diary.add(entry_2)
+expect(diary.all_entries) # => [entry_1, entry_2]
+
+#2 - can identify the number of words in an entry
+diary = Diary.new
+entry_1 = DiaryEntry.new("A Title", "Some contents.")
+diary.add(entry_1)
+result = diary.word_counter # <- May need a seperate method in Diary?
+expect(result) # => 2
+
+#5 - can return a readable entry within a given time
+diary = Diary.new
+entry_1 = DiaryEntry.new("A Title", "Some contents.")
+entry_2 = DiaryEntry.new("A Title", "Some more contents here.")
+diary.add(entry_1)
+diary.add(entry_2)
+result = diary.readable_entry(2, 1) #Can read 2 wpm, have 1 minute available
+expect(result) # => [entry_1]
+
+#PhoneNumbers -> Diary
+
+#1 - It can correctly identify a phone number in an entry.
+diary = Diary.new
+numbers_scan = PhoneNumbers.new
+entry = DiaryEntry.new("A Title", "Some contents with a number 07800800800.")
+diary.add(entry)
+numbers_scan.split_entries(diary)
+result = numbers_scan.list
+expect(result).to eq ["07800800800"]
+
+#2 - With multiple entries, can store multiple numbers.
+diary = Diary.new
+numbers_scan = PhoneNumbers.new
+entry_1 = DiaryEntry.new("A Title", "Some contents with a number 07800800800.")
+entry_2 = DiaryEntry.new("A Title", "Some more contents here with a number 07900900900.")
+diary.add(entry_1)
+diary.add(entry_2)
+numbers_scan.split_entries(diary)
+result = numbers_scan.list
+expect(result).to eq ["07800800800", "07900900900"]
+
+#3 - Does not store incorrect numbers
+diary = Diary.new
+numbers_scan = PhoneNumbers.new
+entry_1 = DiaryEntry.new("A Title", "Some contents with a number 07800800800.")
+entry_2 = DiaryEntry.new("A Title", "Some more contents here with a number 07900900900.")
+entry_3 = DiaryEntry.new("My Title", "Some contents")
+entry_4 = DiaryEntry.new("My Title", "Some contents with an incorrect number, 07900900")
+diary.add(entry_1)
+diary.add(entry_2)
+diary.add(entry_3)
+diary.add(entry_4)
+numbers_scan.split_entries(diary)
+result = numbers_scan.list
+expect(result).to eq ["07800800800", "07900900900"]
+
+4. Create Examples as Unit Tests
+
+#Diary
+
+#1 - It initializes
+diary = Diary.new
+expect(Diary) # => diary
+
+#2 - Has an empty array after intializing
+diary = Diary.new
+expect(diary.all_entries)  # => []
+
+#DiaryEntry
+
+#1 - Constructs a diary entry
+entry = DiaryEntry.new("title", "contents")
+expect(entry.title) # => "title"
+expect(entry.contents) # => "contents"
+
+#2 - Can count the number of words in an entry
+entry = DiaryEntry.new("title", "Some contents.")
+expect(entry.word_counter)  # => 2
+
+#3 - Can calculate reading time
+entry = DiaryEntry.new("title", "Some contents.")
+result = entry.reading_time(2) # 2 wpm
+expect(result)  # => 1 #1 minute
+
+#PhoneNumbers
+
+#1 - It can scan an entry and return its phone numbers
+numbers_scan = PhoneNumbers.new
+entry = ("A Title", "Some contents with a number 07800800800.")
+numbers_scan.check_for_number(entry)
+result = numbers_scan.list
+expect(result).to eq ["07800800800"]
+
+5. Implement the Behaviour
+
+After each test you write, follow the test-driving process of red, green, refactor to implement the behaviour.
+
+

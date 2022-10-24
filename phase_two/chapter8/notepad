@@ -1,0 +1,20 @@
+Test driving Diary function.
+
+2 Classes - Diary and DiaryEntry
+
+Diary has methods to:
+
+Add
+All
+Count Words
+Reading time
+find best entry for reading time
+
+DiaryEntry has methods:
+
+title
+contents
+count Words
+reading time
+reading chunk
+

@@ -1,0 +1,115 @@
+1. Describe the Problem
+
+As a user
+So that I can keep track of my tasks
+I want to keep a todo list along with my diary
+
+2. Design the Class System
+
+                class TodoList
+                    # Stores a list of todo items
+                    # Will show which items are complete or not
+                ^^^^^
+                class Todo
+                    # Creates a todo item.
+                    # Has ability to mark an item complete
+
+class TodoList
+    def initialize
+        #will store two lists
+        # incomplete / complete
+    end
+
+    def add(task)
+        #adds an instance of Todo
+        #sends to list of tasks
+    end
+
+    def incomplete
+        #returns list of tasks to complete
+    end
+
+    def complete
+        #returns a list of complete items
+    end
+end
+
+class Todo
+    def initialize(task)
+        #intializes with a todo item
+        #has an indication of whether an item is complete
+    end
+
+    def todo_task
+        #returns task
+    end
+
+    def mark_complete
+        #marks task as complete
+    end
+
+    def is_complete?
+        #returns whether item is complete
+    end
+end
+
+3. Create Examples as Integration Tests
+
+#Todo -> TodoList
+#1 - adds tasks to the list
+list = TodoList.new
+todo_1 = Todo.new("Wash the dishes")
+todo_2 = Todo.new("Go shopping")
+list.add(todo_1)
+list.add(todo_2)
+expect(list.incomplete) # => [todo_1, todo_2]
+
+#2 - marks a task as complete
+list = TodoList.new
+todo_1 = Todo.new("Wash the dishes")
+list.add(todo_1)
+todo_1.mark_complete
+expect(list.complete) # => [todo_1]
+
+#3 - can return both a complete and incomplete list correctly
+list = TodoList.new
+todo_1 = Todo.new("Wash the dishes")
+todo_2 = Todo.new("Walk the dog")
+list.add(todo_1)
+list.add(todo_2)
+todo_1.mark_complete
+expect(list.incomplete) # => [todo_2]
+expect(list.complete) # => [todo_1]
+
+
+4.  Create Examples as Unit Tests
+#Todo
+#1 - Initializes with an task
+todo_1 = Todo.new("Walk the dog")
+expect(todo_1.todo_task) # => "Walk the dog"
+
+#2 - Can mark a task as complete
+todo_1 = Todo.new("Walk the dog")
+todo_1.mark_complete
+expect(todo_1.is_complete?) # => true
+
+#3 - Returns false if not complete
+todo_1 = Todo.new("Walk the dog")
+expect(todo_1.is_complete?) # => false
+
+#TodoList
+#1 - Initializes with an empty array.
+list = TodoList.new
+expect(list) # => []  << May need a method to call all items
+
+#2 - Initializes and returns complete as an empty array
+list = TodoList.new
+expect(list.complete) # => []
+
+#3 - Initializes and returns incomplete as an empty array
+list = TodoList.new
+expect(list.incomplete) # => []
+
+5. Implement the Behaviour
+
+After each test you write, follow the test-driving process of red, green, refactor to implement the behaviour.
